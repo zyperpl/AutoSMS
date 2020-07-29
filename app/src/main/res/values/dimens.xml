@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="fab_margin">24dp</dimen>
+    <dimen name="box_margin">4dp</dimen>
+</resources>

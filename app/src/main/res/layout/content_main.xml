@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".MainActivity"
+        tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_margin="0dp">
+
+            <SearchView
+                    android:id="@+id/trigger_search"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="90"
+                    android:background="@drawable/round_border"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:hint="@string/search"
+                    android:importantForAutofill="no"
+                    android:inputType="phone|text|textPersonName"
+                    android:padding="0dp" />
+
+            <ImageButton
+                    android:id="@+id/menu_button"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:layout_margin="0dp"
+                    android:background="@drawable/contact_style"
+                    android:clickable="true"
+                    android:contentDescription="@string/menu_options"
+                    android:longClickable="true"
+                    android:padding="8dp"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/ic_dots" />
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/list_tabs"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="0dp"
+                android:layout_marginEnd="0dp"
+                android:background="@drawable/round_border"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <ToggleButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/tab_background"
+                    android:textOff="@string/tab_planned"
+                    android:textOn="@string/tab_planned" />
+
+            <ToggleButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/tab_background"
+                    android:checked="true"
+                    android:textOff="@string/tab_all"
+                    android:textOn="@string/tab_all" />
+
+            <ToggleButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/tab_background"
+                    android:textOff="@string/tab_completed"
+                    android:textOn="@string/tab_completed" />
+
+        </LinearLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipe_refresh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/trigger_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="@drawable/trigger_style"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/list_tabs"
+                    tools:itemCount="7"
+                    tools:listitem="@layout/trigger_item" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

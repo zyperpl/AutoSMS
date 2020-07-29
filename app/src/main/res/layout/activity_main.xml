@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:background="#ffffff">
+
+    <include layout="@layout/content_main"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/gps_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="240dp"
+            android:layout_marginEnd="@dimen/fab_margin"
+            app:fabSize="normal"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/ic_location"
+            android:background="@color/colorAccent"
+            tools:visibility="visible"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/time_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="168dp"
+            android:layout_marginEnd="@dimen/fab_margin"
+            app:fabSize="normal"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/ic_time"
+            android:background="@color/colorAccent"
+            tools:visibility="visible"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/reply_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="96dp"
+            android:layout_marginEnd="@dimen/fab_margin"
+            app:fabSize="normal"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/ic_reply"
+            android:background="@color/colorAccent"
+            tools:visibility="visible"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            app:fabSize="normal"
+            app:srcCompat="@drawable/ic_add"
+            android:background="@color/colorAccent"
+            tools:rotation="45"
+            />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
